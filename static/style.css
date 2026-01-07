@@ -1,0 +1,870 @@
+:root {
+    --primary-bg: #f0f9ff;
+    --secondary-color: #0ea5e9;
+    --text-gray: #64748b;
+    --text-black: #0c4a6e;
+    --white: #ffffff;
+    --gradient: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    --shadow: 0 10px 30px rgba(14, 165, 233, 0.15);
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'DM Sans', sans-serif; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body { 
+    background: var(--gradient); 
+    overflow-x: hidden; 
+    color: var(--text-black);
+}
+
+/* --- Professional Navbar --- */
+.app__navbar {
+    width: 100%; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem 4rem; 
+    position: fixed; 
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.logo-icon {
+    background: var(--secondary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-name {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--text-black);
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.brand-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+/* --- Navigation Links (No Underline, Only Color) --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 1.2rem;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+/* Hover effect aur Active section effect (Only color change) */
+.nav-links li a:hover,
+.nav-links li a.active {
+    color: var(--secondary-color) !important;
+    border: none !important; /* No Underline */
+}
+
+.nav-links li a::after {
+    display: none !important;
+}
+
+/* --- Dot Navigation Styling --- */
+.dot-nav {
+    position: fixed;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border: 1.5px solid var(--secondary-color);
+    border-radius: 50%;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Active Dot */
+.dot.active {
+    background: var(--secondary-color);
+    transform: scale(1.4);
+    box-shadow: 0 0 8px rgba(14, 165, 233, 0.4);
+}
+
+/* Hover effect */
+.dot:hover {
+    background: rgba(14, 165, 233, 0.3);
+}
+
+/* Mobile View dot-nav */
+@media screen and (max-width: 768px) {
+    .dot-nav { display: none; }
+}
+
+/* --- Hero Section --- */
+.app__header { 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 80px 8% 0; 
+    position: relative; 
+}
+
+.header-info { flex: 0.7; z-index: 2; }
+.badge {
+    background: var(--white); 
+    padding: 1.5rem 2rem; 
+    border-radius: 25px;
+    box-shadow: var(--shadow); 
+    display: flex; 
+    align-items: center; 
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.tag-box {
+    background: var(--white); 
+    padding: 0.8rem 1.5rem; 
+    border-radius: 12px;
+    box-shadow: var(--shadow); 
+    width: fit-content; 
+    margin-top: 1.5rem;
+    margin-left: auto;
+    border-right: 4px solid var(--secondary-color);
+}
+
+.header-img { 
+    flex: 1; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    position: relative; 
+}
+
+.profile-img { 
+    width: 100%; 
+    max-width: 420px; 
+    z-index: 2; 
+    position: relative; 
+    filter: drop-shadow(0 20px 50px rgba(0,0,0,0.1));
+}
+
+.bg-circle-white {
+    position: absolute; 
+    width: 350px; 
+    height: 350px;
+    background: var(--white); 
+    border-radius: 50%; 
+    z-index: 1;
+    box-shadow: 0 0 80px rgba(255,255,255,0.8);
+}
+
+.header-circles { 
+    flex: 0.5; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 30px; 
+}
+
+.circle {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background: var(--white);
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    box-shadow: var(--shadow); 
+    animation: float 5s infinite ease-in-out;
+}
+
+.circle img { width: 55%; object-fit: contain; }
+.circle-lg { width: 160px; height: 160px; }
+.circle-sm { width: 80px; height: 80px; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* --- Social Media Sidebar --- */
+.app__social {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 0.8rem;
+    backdrop-filter: blur(15px);
+    border-radius: 0 15px 15px 0;
+    box-shadow: var(--shadow);
+    z-index: 1001;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.app__social a {
+    width: 32px;
+    height: 32px;
+    transition: 0.3s;
+}
+
+.app__social a:hover { transform: translateX(8px) scale(1.2); }
+.app__social img { width: 100%; height: 100%; filter: grayscale(20%); }
+.app__social a:hover img { filter: grayscale(0%); }
+
+
+/* --- Responsiveness --- */
+@media screen and (max-width: 1024px) {
+    .app__header { flex-direction: column; padding-top: 120px; text-align: center; }
+    .header-info { margin-bottom: 3rem; }
+    .header-circles { flex-direction: row; margin-top: 3rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .app__navbar { padding: 1rem 2rem; }
+    .nav-links { display: none; }
+    .app__social {
+        flex-direction: row;
+        top: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 30px;
+    }
+}
+
+/* --- About Section Professional Fix --- */
+.app__about {
+    padding: 100px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__heading-wrapper {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-heading {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-black);
+    line-height: 1.2;
+}
+
+.about-heading span {
+    color: var(--secondary-color);
+}
+
+.about__cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.about__card {
+    width: 320px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+    text-align: left;
+}
+
+.about__card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon Box Styling */
+.card__img-box {
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Professional SVG Icon Styling */
+.professional-icon {
+    width: 80px;
+    height: 80px;
+    stroke: var(--secondary-color); /* Blue color for icons */
+    stroke-width: 1.5;
+}
+
+/* Background Colors */
+.sky-blue { background-color: #e0f2fe !important; }
+.purple   { background-color: #ede9fe !important; }
+.gray     { background-color: #f3f4f6 !important; }
+
+.about__card h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    color: var(--text-black);
+}
+
+.about__card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .about-heading { font-size: 2rem; }
+    .about__card { width: 100%; max-width: 350px; }
+}
+
+
+/* --- Skills Section Professional Fix --- */
+.app__skills {
+    padding: 80px 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin-top: 50px;
+}
+
+.skill__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    transition: 0.3s ease;
+}
+
+.skill__item:hover {
+    transform: translateY(-5px);
+}
+
+.skill__icon {
+    width: 90px;
+    height: 90px;
+    background: #ffffff; /* Pure white background */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Very light shadow */
+}
+
+.skill__icon i {
+    font-size: 45px; /* Icon size */
+}
+
+.skill__item p {
+    font-size: 0.9rem;
+    color: #4b5563; /* Medium Gray text */
+    font-weight: 500;
+}
+
+.skill__icon img {
+    max-width: 80%;
+    max-height: 80%;
+    display: block;
+    margin: auto;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    .skills__container { gap: 20px; }
+    .skill__item { width: 80px; }
+}
+
+
+/* --- Portfolio Case Studies Section --- */
+.app__works {
+    padding: 80px 5%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Adjustment */
+.head-text {
+    font-size: 2.75rem;
+    font-weight: 800;
+    text-align: center;
+    color: #05445E; /* Dark Navy Blue */
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.head-text span {
+    color: #0ea5e9; /* Sky Blue */
+}
+
+/* --- Tab Filter Styling (Header Style Sync) --- */
+.app__work-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 4rem;
+}
+
+.app__work-filter-item {
+    padding: 10px 22px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #030303;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+    font-size: 0.9rem;
+}
+
+/* Header Active Tab Match - Blue Background */
+.app__work-filter-item.active, 
+.app__work-filter-item:hover {
+    background-color: var(--secondary-color); /* Wahi color jo aapke header ke active tab ka hai */
+    color: #ffffff !important;
+    border-color: #0ea5e9 !important;
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+}
+
+/* --- Project Grid Adjustment --- */
+/* --- Project Grid Adjustment --- */
+.app__work-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    align-items: stretch; /* Cards ko nichay se barabar rakhta hai */
+}
+
+.app__work-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 0; 
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.4s ease;
+    overflow: visible !important; /* Tag bahar dikhane ke liye */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.app__work-item:hover {
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* --- Image Section Fix --- */
+.app__work-img {
+    width: 100%;
+    height: 200px; /* Fixed height sequence barabar rakhne ke liye */
+    position: relative;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    overflow: hidden;
+    line-height: 0; 
+}
+
+.app__work-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block; 
+}
+
+/* --- Hover Icons Fix --- */
+.app__work-hover {
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.app__work-item:hover .app__work-hover {
+    opacity: 1;
+}
+
+.icon-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: rgba(5, 68, 94, 0.9);
+    color: #fff;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.icon-circle i {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+.icon-circle:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.1);
+}
+
+/* --- Content & Tag Position Fix --- */
+.app__work-content {
+    padding: 1.5rem 1.2rem;
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Tag ko Image ke upar float karne ke liye */
+.app__work-tag {
+    position: absolute;
+    top: -20px; /* Isse wo image ke bottom edge par float karega */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0ea5e9; 
+    padding: 5px 15px;
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(14, 165, 233, 0.3);
+    white-space: nowrap; /* Text ko ek line mein rakhta hai */
+}
+
+.app__work-tag p {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    margin: 0;
+}
+
+.app__work-content h4 {
+    color: #05445E; 
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-top: 10px; /* Tag ki wajah se thora gap */
+    min-height: 2.4rem; /* Taake headings barabar rahein */
+}
+
+.app__work-content p {
+    line-height: 1.5;
+    color: #6b7688;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+/* --- Footer --- */
+.app__footer {
+    padding: 100px 5% 40px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-bg);
+}
+
+.footer__content {
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 1. Heading - One Line & Gap */
+.head-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 25px !important; 
+    color: var(--text-dark);
+    white-space: nowrap; /* Desktop par aik line mein rakhta hai */
+}
+
+.head-text span {
+    color: var(--secondary-color);
+}
+
+/* 2. Intro Bio Gap */
+.intro-bio {
+    margin-bottom: 45px !important;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* 3. Email Card - Professional & No Giant Icons */
+.app__footer-cards {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px !important; /* Card aur Form ke darmiyan gap */
+    width: 100%;
+}
+
+.app__footer-card {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    width: 55%;
+    /* box-shadow: 0 10px 30px rgba(0,0,0,0.05); */
+}
+
+.app__footer-card:hover {
+    border-color: var(--secondary-color);
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.app__footer-card img {
+    width: 28px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.email-info {
+    position: relative;
+    text-align: left;
+}
+
+.email-tagline {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.email-link-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.email-info a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #313bac;
+    font-size: 1rem;
+}
+
+/* Copied Status - Hidden by default */
+#copy-status {
+    display: none; 
+    position: absolute;
+    right: -70px;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 0.8rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* 4. Form Styling & Gaps */
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Input fields ke darmiyan professional gap */
+    margin-bottom: 70px;
+}
+
+.input-field {
+    background-color: var(--input-bg);
+    border-radius: 12px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.input-field:focus-within {
+    background-color: #ffffff;
+    box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+.input-field input, .input-field textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text-dark);
+}
+
+/* 5. Send Message Button */
+.form-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.send-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    
+    /* Padding kam karne se button chota ho jayega */
+    padding: 10px 25px; 
+    
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    
+    /* Font size normal rakha hai */
+    font-size: 0.9rem;
+    
+    /* Width auto taake button phaila hua nazar na aaye */
+    width: auto;
+    min-width: 140px; 
+    
+    transition: all 0.3s ease;
+    display: block;
+    margin: 10px auto 0; /* Button ko center mein rakhne ke liye */
+}
+
+.send-btn:hover {
+    background-color: #0284c7;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(14, 165, 233, 0.2);
+}
+
+/* Success Message Styling - Sirf click ke baad dikhane ke liye */
+#formStatus {
+    display: none; /* Default hidden */
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 700; /* Bold taake saaf nazar aaye */
+    text-align: center;
+    width: 100%;
+    /* Wahi Dark Blue color jo aapne manga hai */
+    color: #05445E !important; 
+    background: transparent !important; /* Background khatam */
+    border: none !important; /* Border bhi khatam */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Jab click ho toh dikhane ke liye class */
+#formStatus.show {
+    display: block !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 6. Copyright Footer Bottom */
+.footer__bottom {
+    width: 100%;
+    padding-top: 40px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 5px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .head-text {
+        white-space: normal;
+        font-size: 2rem;
+    }
+    .app__footer-card {
+        width: 100%;
+        padding: 15px;
+    }
+    #copy-status {
+        position: static;
+        margin-left: 10px;
+    }
+}

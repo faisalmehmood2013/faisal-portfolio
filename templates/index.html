@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faisal | AI Automation Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 x=%2250%%22 text-anchor=%22middle%22 font-size=%2290%22 fill=%22%230ea5e9%22 font-family=%22Arial, sans-serif%22 font-weight=%22bold%22>F</text></svg>">    </body>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+   <div class="app__social">
+        <a href="https://www.linkedin.com/in/fmehmood1122/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/faisalmehmood2013/" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+        </a>
+        <a href="https://www.kaggle.com/faisalmehmood2022/" target="_blank" rel="noopener noreferrer" title="Kaggle">
+        <img src="https://www.vectorlogo.zone/logos/kaggle/kaggle-icon.svg" alt="Kaggle" style="width: 100%; height: 100%;">
+        </a>
+        <a href="https://www.facebook.com/FMGillani/" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/fmgillani/" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+        </a>
+    </div>
+
+    <nav class="app__navbar">
+        <div class="logo">
+             <!-- <img src="{{ url_for('static', filename='images/Faisal_Logo.png') }}" alt="Faisal Logo"> -->
+             <a href="#" class="logo-container">
+                <div class="logo-icon">F</div>
+                    <div class="logo-text">
+                        <span class="brand-name">FAISAL MEHMOOD</span>
+                        <span class="brand-tag">Automating Business Success with AI</span>
+                    </div>
+            </a>
+        </div>
+        
+        <ul class="nav-links">
+            <li><a href="#HOME">HOME</a></li>
+            <li><a href="#ABOUT">ABOUT</a></li>
+            <li><a href="#SKILLS">SKILLS</a></li>
+            <li><a href="#WORK">WORK</a></li>
+            <li><a href="#CONTACT">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div class="dot-nav">
+        <a href="#HOME" class="dot active" data-section="HOME"></a>
+        <a href="#ABOUT" class="dot" data-section="ABOUT"></a>
+        <a href="#SKILLS" class="dot" data-section="SKILLS"></a>
+        <a href="#WORK" class="dot" data-section="WORK"></a>
+        <a href="#CONTACT" class="dot" data-section="CONTACT"></a>
+    </div>
+
+    <header id="HOME" class="app__header">
+        <div class="header-info">
+            <div class="badge">
+                <span style="font-size: 3rem;">👋</span>
+                <div style="margin-left: 20px;">
+                    <p style="color: var(--gray); font-size: 1rem;">Hello, I am</p>
+                    <h1 style="font-size: 3rem; font-weight: 800; line-height: 1.2;">Faisal Mehmood</h1>
+                </div>
+            </div>
+            <div class="tag-box">
+                <p style="color: var(--gray); font-size: 0.9rem; text-transform: uppercase; font-weight: 600;">AI STRATEGIST & AUTOMATION ENGINEER</p>
+            </div>
+            <!-- <div class="tag-box">
+                <p style="color: var(--gray); font-size: 0.9rem; text-transform: uppercase; font-weight: 600;">AI Engineer</p>
+            </div> -->
+        </div>
+
+        <div class="header-img">
+            <img src="{{ url_for('static', filename='images/profile-img.png') }}" class="profile-img" alt="Faisal Mehmood">
+             
+        </div>
+
+        <div class="header-circles">
+            <div class="circle circle-sm">
+                <img src="https://cdn-icons-png.flaticon.com/512/6062/6062646.png" alt="AI">
+            </div>
+            <div class="circle circle-lg">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png" alt="Python">
+            </div>
+            <div class="circle">
+                <img src="https://raw.githubusercontent.com/n8n-io/n8n/master/assets/n8n-logo.png" alt="n8n">
+            </div>
+        </div>
+    </header>
+
+    <section id="ABOUT" class="app__about">
+        <div class="about__heading-wrapper">
+            <h2 class="about-heading">I Know That <span>Good Automation</span> <br> Means <span>Good Business</span></h2>
+        </div>
+
+        <div class="about__cards-container">
+            <div class="about__card">
+                <div class="card__img-box sky-blue">
+                    <i data-lucide="cpu" class="professional-icon"></i>
+                </div>
+                <h3>AI Automation Expert</h3>
+                <p>I specialize in building intelligent workflows using n8n and Python to automate repetitive business processes.</p>
+            </div>
+
+            <div class="about__card">
+                <div class="card__img-box purple">
+                    <i data-lucide="bar-chart-3" class="professional-icon"></i>
+                </div>
+                <h3>Data Analyst</h3>
+                <p>Transforming raw data into actionable insights using advanced statistical models and visualization tools.</p>
+            </div>
+
+            <div class="about__card">
+                <div class="card__img-box gray">
+                    <i data-lucide="bot" class="professional-icon"></i>
+                </div>
+                <h3>GenAI Solutions</h3>
+                <p>Developing custom AI agents and chatbots leveraging LLMs like OpenAI and LangChain for business efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    lucide.createIcons();
+    </script>
+
+    <section id="SKILLS" class="app__skills">
+        <div class="section__title">
+            <h2>Skills</h2>
+        </div>
+
+        <div class="skills__container">
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-robot" style="color: #0ea5e9;"></i></div>
+                <p>AI Automation</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fab fa-python" style="color: #3776ab;"></i></div>
+                <p>Python</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-project-diagram" style="color: #ff6b6b;"></i></div>
+                <p>n8n</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-brain" style="color: #9b59b6;"></i></div>
+                <p>OpenAI / GenAI</p>
+            </div>
+
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-chart-line" style="color: #2ecc71;"></i></div>
+                <p>Data Analysis</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-database" style="color: #f39c12;"></i></div>
+                <p>Database</p>
+            </div>
+
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fab fa-git-alt" style="color: #f05032;"></i></div>
+                <p>Git / Github</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-cloud" style="color: #00a8e8;"></i></div>
+                <p>Cloud Hosting</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="fas fa-server" style="color: #555;"></i></div>
+                <p>Rest APIs</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-pandas-plain colored"></i></div>
+                <p>Pandas (EDA)</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-numpy-plain colored"></i></div>
+                <p>NumPy</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-matplotlib-plain colored"></i></div>
+                <p>Matplotlib</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon">
+                    <span style="color: #3776ab; font-weight: 900; font-size: 1.2rem; font-family: sans-serif;">Sbn</span>
+                </div>
+                <p>Seaborn</p>
+            </div>
+
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-flask-original"></i></div>
+                <p>Flask</p>
+            </div>
+
+            <div class="skill__item">
+                <div class="skill__icon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" style="width: 50px;" alt="Scikit-learn">
+                </div>
+                <p>Scikit-Learn</p>
+            </div>
+
+            <div class="skill__item">
+                <div class="skill__icon">
+                    <i class="fas fa-link" style="color: #121212;"></i>
+                </div>
+                <p>LangChain</p>
+            </div>
+
+            <!-- <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-fastapi-plain colored"></i></div>
+                <p>FastAPI</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-opencv-plain colored"></i></div>
+                <p>OpenCV</p>
+            </div>
+            <div class="skill__item">
+                <div class="skill__icon"><i class="devicon-tensorflow-original colored"></i></div>
+                <p>TensorFlow</p>
+            </div> -->
+
+        </div>
+    </section>
+
+    <section id="WORK" class="app__works">
+        <h2 class="head-text">My Creative <span>Portfolio</span></h2>
+
+        <div class="app__work-filter">
+            <div class="app__work-filter-item p-text" data-filter="AI Automation">AI Automation</div>
+            <div class="app__work-filter-item p-text" data-filter="Data Science">Data Science</div>
+            <div class="app__work-filter-item p-text" data-filter="Web Solutions">Web Solutions</div>
+            <div class="app__work-filter-item p-text active" data-filter="all">All</div>
+        </div>
+
+        <div class="app__work-portfolio">
+         
+            <div class="app__work-item" data-category="AI Automation">
+                <div class="app__work-img">
+                    <img src="static/images/project1.png" alt="AI Retail & Distribution System Project">
+                    <div class="app__work-hover app__flex">
+                        <a href="https://faisalmehmood2013.github.io/AI-Retail-Distribution-Automation-System/" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a>
+                        <a href="https://github.com/faisalmehmood2013/AI-Retail-Distribution-Automation-System" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">AI Retail & Distribution System</h4>
+                    <p class="p-text">AI-powered system with 17 automated workflows for inventory, tracking, and retail business efficiency.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">AI Automation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Web Solutions">
+                <div class="app__work-img">
+                    <img src="static/images/project2.png" alt="My Portfolio Project">
+                    <div class="app__work-hover app__flex">
+                        <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a>
+                        <a href="#" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Interactive Digital Portfolio</h4>
+                    <p class="p-text">A high-end digital showcase optimized for speed, featuring seamless UX and modern motion design.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Personal Portfolio</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project3.png" alt="Customer Churn Prediction Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/ml_project_customer_churn_prediction_telecom/tree/main" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Predictive Customer Churn Analysis</h4>
+                    <p class="p-text">ML model predicting customer attrition using behavioral data to enhance retention and business ROI.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Predictive Analytics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project4.png" alt="E-commerce Analysis Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/sql_projects/blob/main/1_Ecommerce_Target_Barazil/ecommerce_project.ipynb" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">E-commerce Market Data Analysis</h4>
+                    <p class="p-text">Advanced SQL analysis of retail data to uncover consumer trends, logistics, and sales performance.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Data Insights</p>
+                    </div>
+                </div>
+            </div>    
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project5.png" alt="E-commerce Analysis Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/excel_projects/blob/main/1_Ecommerce%20Sales%20Analysis/Ecommerce%20Sales%20Analysis%20Dashboard.png" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Sales Revenue & KPIs Dashboard</h4>
+                    <p class="p-text">Interactive Excel dashboard tracking revenue, sales growth, and KPIs for data-driven decision making.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Business Insights</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project6.png" alt="Pakistan E-commerce Analysis Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/Project_EDA/blob/main/2.%20Pakistan%20Ecommerce%20Dataset/unleash-insights-with-a-6-step-data-driven-guide.ipynb" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Pakistan E-commerce Market EDA</h4>
+                    <p class="p-text">Comprehensive 6-step data analysis exploring consumer behavior and trends in Pakistan's retail market.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Data Insights</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project7.png" alt="Apple App Store Analysis Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/Project_EDA/blob/main/3.%20Apple%20Play%20Store%20Dataset/unveiling-apple-play-store-insights-data-journey.ipynb" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Apple Play Store Data Journey</h4>
+                    <p class="p-text">In-depth market analysis of iOS apps to identify top-performing categories and user rating patterns.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Data Insights</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app__work-item" data-category="Data Science">
+                <div class="app__work-img">
+                    <img src="static/images/project8.png" alt="Google Play Store Analysis Project">
+                    <div class="app__work-hover app__flex">
+                        <!-- <a href="#" target="_blank" title="Live Demo"><div class="icon-circle"><i class="fa fa-eye"></i></div></a> -->
+                        <a href="https://github.com/faisalmehmood2013/Project_EDA/blob/main/1.%20Google%20Play%20Store%20Dataset/exploring-the-world-of-google-play-store.ipynb" target="_blank" title="View Code"><div class="icon-circle"><i class="fab fa-github"></i></div></a>
+                    </div>
+                </div>
+                <div class="app__work-content">
+                    <h4 class="bold-text">Google Play Store Market Analysis</h4>
+                    <p class="p-text">Deep dive into Android app metrics to extract trends on ratings, installs, and pricing strategies.</p>
+                    <div class="app__work-tag">
+                        <p class="p-text">Data Insights</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="CONTACT" class="app__footer">
+        <div class="footer__content">
+            <h2 class="head-text">Let's Build <span>The Future</span> Together</h2>
+            <p class="p-text intro-bio">I help businesses turn raw data into AI-driven growth. Reach out if you're looking for a strategist or an AI Engineer to build the future.</p>
+
+            <div class="app__footer-cards">
+                <div class="app__footer-card" id="emailCard" style="cursor: pointer;">
+                    <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email" />
+                    <div class="email-info">
+                        <p class="email-tagline">Click to copy or send email</p>
+                        <div class="email-link-group">
+                            <a href="mailto:shahfaisal1234@gmail.com">shahfaisal1234@gmail.com</a>
+                            <span id="copy-status" style="display: none; position: absolute; right: -60px; color: #0ea5e9; font-weight: bold;">Copied!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <div class="input-field"><input type="text" placeholder="Your Name" name="name" required /></div>
+                <div class="input-field"><input type="email" placeholder="Your Email" name="email" required /></div>
+                <div class="input-field"><textarea placeholder="Your Message" name="message" rows="5" required></textarea></div>
+                <div class="form-btn-container">
+                    <button type="submit" class="send-btn">Send Message</button>
+                </div>
+                <div id="formStatus"></div>
+            </form>
+
+            <div class="footer__bottom">
+                <div class="copyright">
+                    <p>@2026 FAISAL MEHMOOD</p>
+                    <p>ALL RIGHTS RESERVED | BUILT WITH PASSION & AI</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
