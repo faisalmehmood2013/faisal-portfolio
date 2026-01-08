@@ -11,12 +11,12 @@ APP_PASSWORD = os.getenv('APP_PASSWORD')
 RECEIVER_EMAIL = os.getenv('RECEIVER_EMAIL')
 
 app = Flask(__name__)
-app.secret_key = os.getenv('app.secret_key') # Flash messages ke liye zaroori hai
+app.secret_key = os.getenv('app.secret_key') 
 
 # --- Email Configuration ---
-# Google Account -> Security -> 2-Step Verification -> App Passwords se 16-digit code lein
+# Google Account -> Security -> 2-Step Verification ->
 # SENDER_EMAIL = SENDER_EMAIL 
-# APP_PASSWORD = APP_PASSWORD # Apna 16-digit app password yahan dalein
+# APP_PASSWORD = APP_PASSWORD 
 # RECEIVER_EMAIL = RECEIVER_EMAIL 
 
 @app.route('/')
@@ -38,7 +38,7 @@ def contact():
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(SENDER_EMAIL, APP_PASSWORD)
             server.send_message(msg)
-        # JSON Response bhej rahe hain
+       
         return jsonify({"status": "success", "message": "Thank you! Your message has been sent."})
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})

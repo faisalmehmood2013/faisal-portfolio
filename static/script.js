@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             navigator.clipboard.writeText(emailText).then(() => {
                 if (status) {
-                    status.style.color = "#05445E"; // "I Know That" wala dark blue
+                    status.style.color = "#05445E"; 
                     status.style.display = 'inline';
                     setTimeout(() => { status.style.display = 'none'; }, 2000);
                 }
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             submitBtn.innerText = "Sending...";
             submitBtn.disabled = true;
 
-            // Frontend success dikhane ke liye (Agar backend na bhi ho tab bhi test karne ke liye)
+            
             fetch('/contact', {
                 method: 'POST',
                 body: formData
@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             })
             .catch(error => {
-                // Testing ke liye: Agar fetch fail ho (backend missing ho) tab bhi success dikhana ho toh ye use karein:
                 formStatus.innerHTML = "✅ Success! Your message has been sent.";
                 formStatus.classList.add('show');
                 this.reset();
@@ -81,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 submitBtn.innerText = "Send Message";
                 submitBtn.disabled = false;
                 
-                // 5 seconds baad message gayab ho jayega
+               
                 setTimeout(() => { 
                     formStatus.classList.remove('show');
                     formStatus.innerHTML = ""; 
@@ -96,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filterItems.forEach(filterItem => {
         filterItem.addEventListener('click', function() {
-            // Active class change karna
             filterItems.forEach(item => item.classList.remove('active'));
             this.classList.add('active');
 
